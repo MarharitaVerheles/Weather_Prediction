@@ -1,22 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
-
-# In[42]:
-
-
 import requests
 import json
 import csv
 
-
-# In[27]:
-
-
 URL = 'https://archive-api.open-meteo.com/v1/archive'
-
-
-# In[36]:
-
 
 def get_data(latitude, longitude, start_date, end_date):
     parameters = {
@@ -55,13 +43,6 @@ def get_data(latitude, longitude, start_date, end_date):
         return None
         
 
-#time, temperature_2m, relativehumidity_2m, pressure_msl, precipitation, cloudcover, direct_radiation, diffuse_radiation, windspeed_10m 
-        
-
-
-# In[41]:
-
-
 def make_csv(file_path, data):
     if data is None:
         print("No weather data to save.")
@@ -86,10 +67,4 @@ def make_csv(file_path, data):
                     data['windspeed_10m'][i]
                 ]
                 writer.writerow(row)
-
-
-# In[ ]:
-
-
-
 
