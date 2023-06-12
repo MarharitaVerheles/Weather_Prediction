@@ -16,8 +16,7 @@ def get_data(latitude, longitude, start_date, end_date):
                  'direct_radiation,diffuse_radiation,windspeed_10m',
     'timezone' : 'auto'
     }
-    #response_API = requests.get(URL, params=parameters)
-    #response_API = requests.get(URL, params=parameters)
+   
     try:
         response_API = requests.get(URL, params=parameters)
         response_API.raise_for_status()
