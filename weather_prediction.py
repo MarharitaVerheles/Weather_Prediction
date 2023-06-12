@@ -1,19 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
-
-
-# In[27]:
-
 
 def prediction(user_data):
     data = pd.read_csv('weather_data_from_api.csv')
@@ -61,10 +54,4 @@ def prediction(user_data):
         }
     )
     return model.predict(user_data)
-
-
-# In[ ]:
-
-
-
 
